@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { siteTitle, whoWeAreHeading, whoWeAreBody, whoWeAreHeroImage } from "@/content/copy";
