@@ -3,6 +3,7 @@ import Image from "next/image";
 import { HeroCarousel } from "@/components/HeroCarousel";
 import { SectionReveal } from "@/components/SectionReveal";
 import { whoWeAreBody, whoWeAreHeading, whoWeAreImage } from "@/content/copy";
+import { Hero } from "@/components/Hero";
 
 export default function HomePage() {
   return (
@@ -37,6 +38,7 @@ export default function HomePage() {
           </div>
         </SectionReveal>
       </section>
+      <Hero />
     </main>
   );
 }

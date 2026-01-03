@@ -8,6 +8,8 @@ const nextConfig = {
         hostname: "source.unsplash.com"
       }
     ]
+  experimental: {
+    appDir: true
   }
 };
 
