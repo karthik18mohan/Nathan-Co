@@ -5,12 +5,10 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "source.unsplash.com"
-      }
-    ]
-  experimental: {
-    appDir: true
-  }
+        hostname: "source.unsplash.com",
+      },
+    ],
+  },
 };
 
 module.exports = nextConfig;
