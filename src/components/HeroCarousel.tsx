@@ -100,7 +100,7 @@ export function HeroCarousel() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
-          className="text-4xl font-semibold leading-tight tracking-tight sm:text-5xl lg:text-6xl"
+          className="text-4xl font-semibold leading-tight tracking-[0.06em] sm:text-5xl lg:text-6xl"
         >
           {siteTitle}
         </motion.h1>
@@ -109,7 +109,7 @@ export function HeroCarousel() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg"
+          className="max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg md:text-xl"
         >
           {slides[index].tagline}
         </motion.p>
