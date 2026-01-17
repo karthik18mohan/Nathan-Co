@@ -44,7 +44,7 @@ export function HeroCarousel() {
                 src={heroImage}
                 alt="Architectural facade in monochrome tones"
                 fill
-                className="object-cover grayscale"
+                className="object-cover grayscale drop-shadow-[0_0_25px_rgba(18,18,18,0.35)]"
                 priority
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
