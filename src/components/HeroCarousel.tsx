@@ -1,12 +1,5 @@
-import Image from "next/image";
 import { siteTitle } from "@/content/copy";
 import bgImage from "../../bg.jpg";
-
-const heroImage =
-  "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1600&q=80";
-
-const grainTexture =
-  "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.35'/%3E%3C/svg%3E";
 
 export function HeroCarousel() {
   return (
@@ -26,10 +19,6 @@ export function HeroCarousel() {
               <h1 className="mt-4 text-4xl font-semibold leading-tight text-ink sm:text-5xl lg:text-6xl">
                 {siteTitle}
               </h1>
-              <p className="mt-6 max-w-xl text-base leading-relaxed text-ink/70 sm:text-lg">
-                Purpose-built financial stewardship with an understated heritage—trusted by
-                multi-generational enterprises and emerging leaders alike.
-              </p>
               <div className="mt-10 flex flex-wrap gap-4">
                 <a
                   href="#contact"
@@ -45,22 +34,11 @@ export function HeroCarousel() {
                 </a>
               </div>
             </div>
-            <div className="relative lg:col-span-6">
-              <div className="relative h-[26rem] w-full overflow-hidden rounded-[32px] border border-ink/10 bg-fog shadow-[0_30px_70px_rgba(18,18,18,0.18)] sm:h-[30rem]">
-                <Image
-                  src={heroImage}
-                  alt="Architectural facade in monochrome tones"
-                  fill
-                  className="object-cover grayscale drop-shadow-[0_0_25px_rgba(18,18,18,0.35)]"
-                  priority
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-br from-ivory/20 via-transparent to-deep-green/10" />
-                <div
-                  className="pointer-events-none absolute inset-0 opacity-[0.06] mix-blend-multiply"
-                  style={{ backgroundImage: `url("${grainTexture}")` }}
-                />
-              </div>
+            <div className="lg:col-span-6">
+              <p className="text-base leading-relaxed text-ink/70 sm:text-lg">
+                Purpose-built financial stewardship with an understated heritage—trusted by
+                multi-generational enterprises and emerging leaders alike.
+              </p>
             </div>
           </div>
         </div>
