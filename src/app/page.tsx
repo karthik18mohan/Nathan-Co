@@ -4,7 +4,6 @@ import { SectionReveal } from "@/components/SectionReveal";
 import { TopNav } from "@/components/TopNav";
 import { Footer } from "@/components/Footer";
 import { historyBody, whoWeAreBody, whoWeAreHeading, whoWeAreImage } from "@/content/copy";
-import bgImage from "../../bg.jpg";
 
 export default function HomePage() {
   return (
@@ -15,39 +14,32 @@ export default function HomePage() {
         <section id="who-we-are" className="flex min-h-screen w-full items-center py-20">
           <div className="mx-auto w-full max-w-[1180px] px-6">
             <SectionReveal>
-              <div className="relative overflow-hidden rounded-[32px] border border-ink/10 bg-ivory/80 p-8 shadow-[0_30px_70px_rgba(18,18,18,0.18)] sm:p-10">
-                <div
-                  className="absolute inset-0 bg-cover bg-center opacity-35"
-                  style={{ backgroundImage: `url(${bgImage.src})` }}
-                />
-                <div className="absolute inset-0 bg-ivory/70" />
-                <div className="relative grid gap-12 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
-                  <div>
-                    <p className="text-xs font-semibold uppercase tracking-[0.4em] text-deep-green/70">
-                      {whoWeAreHeading}
-                    </p>
-                    <h2 className="mt-4 text-4xl font-semibold text-ink sm:text-5xl">
-                      A heritage of elevated service and discretion.
-                    </h2>
-                    <p className="mt-6 whitespace-pre-line text-lg leading-relaxed text-ink/70 sm:text-xl">
-                      {whoWeAreBody}
-                    </p>
-                    <a
-                      href="#history"
-                      className="mt-8 inline-flex rounded-full border border-ink/15 bg-ink px-7 py-3 text-xs font-semibold uppercase tracking-[0.32em] text-ivory shadow-[0_18px_40px_rgba(18,18,18,0.25)] transition hover:-translate-y-0.5 hover:bg-ink/90"
-                    >
-                      READ MORE
-                    </a>
-                  </div>
-                  <div className="relative h-80 w-full overflow-hidden rounded-3xl border border-ink/10 bg-white/70 shadow-[0_24px_60px_rgba(18,18,18,0.2)] sm:h-96">
-                    <Image
-                      src={whoWeAreImage}
-                      alt=""
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 1024px) 100vw, 40vw"
-                    />
-                  </div>
+              <div className="grid gap-12 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-[0.4em] text-deep-green/70">
+                    {whoWeAreHeading}
+                  </p>
+                  <h2 className="mt-4 text-4xl font-semibold text-ink sm:text-5xl">
+                    A heritage of elevated service and discretion.
+                  </h2>
+                  <p className="mt-6 whitespace-pre-line text-lg leading-relaxed text-ink/70 sm:text-xl">
+                    {whoWeAreBody}
+                  </p>
+                  <a
+                    href="#history"
+                    className="mt-8 inline-flex rounded-full border border-ink/15 bg-ink px-7 py-3 text-xs font-semibold uppercase tracking-[0.32em] text-ivory shadow-[0_18px_40px_rgba(18,18,18,0.25)] transition hover:-translate-y-0.5 hover:bg-ink/90"
+                  >
+                    READ MORE
+                  </a>
+                </div>
+                <div className="relative h-80 w-full overflow-hidden rounded-3xl border border-ink/10 shadow-[0_24px_60px_rgba(18,18,18,0.2)] sm:h-96">
+                  <Image
+                    src={whoWeAreImage}
+                    alt=""
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 40vw"
+                  />
                 </div>
               </div>
             </SectionReveal>
