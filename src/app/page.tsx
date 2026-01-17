@@ -16,18 +16,18 @@ export default function HomePage() {
             <SectionReveal>
               <div className="grid gap-12 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.4em] text-ink/70">
+                  <p className="text-xs font-semibold uppercase tracking-[0.4em] text-burgundy/80">
                     {whoWeAreHeading}
                   </p>
-                  <h2 className="mt-4 text-4xl font-semibold text-ink sm:text-5xl">
+                  <h2 className="mt-4 text-4xl font-semibold text-navy sm:text-5xl">
                     A heritage of elevated service and discretion.
                   </h2>
-                  <p className="mt-6 whitespace-pre-line text-lg leading-relaxed text-ink/80 sm:text-xl">
+                  <p className="mt-6 whitespace-pre-line text-lg leading-relaxed text-charcoal/80 sm:text-xl">
                     {whoWeAreBody}
                   </p>
                   <a
                     href="#history"
-                    className="mt-8 inline-flex rounded-full border border-ink/15 bg-ink px-7 py-3 text-xs font-semibold uppercase tracking-[0.32em] text-white shadow-glow transition hover:-translate-y-0.5 hover:bg-ink/90"
+                    className="mt-8 inline-flex rounded-full border border-navy/20 bg-navy px-7 py-3 text-xs font-semibold uppercase tracking-[0.32em] text-ivory shadow-glow transition hover:-translate-y-0.5 hover:bg-navy/90"
                   >
                     READ MORE
                   </a>
@@ -48,13 +48,17 @@ export default function HomePage() {
         <section id="history" className="flex min-h-screen w-full items-center py-20">
           <div className="mx-auto w-full max-w-5xl px-6">
             <SectionReveal>
-              <p className="text-xs font-semibold uppercase tracking-[0.4em] text-ink/70">History</p>
-              <h2 className="mt-4 text-4xl font-semibold text-ink sm:text-5xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.4em] text-burgundy/80">
+                History
+              </p>
+              <h2 className="mt-4 text-4xl font-semibold text-navy sm:text-5xl">
                 Stewardship across generations.
               </h2>
             </SectionReveal>
             <SectionReveal>
-              <p className="mt-6 text-lg leading-relaxed text-ink/80 sm:text-xl">{historyBody}</p>
+              <p className="mt-6 text-lg leading-relaxed text-charcoal/80 sm:text-xl">
+                {historyBody}
+              </p>
             </SectionReveal>
           </div>
         </section>

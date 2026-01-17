@@ -36,23 +36,23 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-ink/10 bg-white/80 py-12">
+    <footer className="border-t border-navy/10 bg-ivory/90 py-12">
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-10 px-6 lg:flex-row lg:items-start lg:justify-between">
         <div className="space-y-3">
-          <p className="text-sm font-medium uppercase tracking-[0.35em] text-ink">Nathan &amp; Co.</p>
-          <p className="text-sm text-ink/70">© {year} Nathan &amp; Co. All rights reserved.</p>
+          <p className="text-sm font-medium uppercase tracking-[0.35em] text-navy">Nathan &amp; Co.</p>
+          <p className="text-sm text-charcoal/70">© {year} Nathan &amp; Co. All rights reserved.</p>
         </div>
-        <div className="space-y-2 text-sm text-ink/70">
+        <div className="space-y-2 text-sm text-charcoal/70">
           <p>Email: hello@example.com</p>
           <p>Phone: +00 0000 0000</p>
           <p>Address: Placeholder address</p>
         </div>
-        <div className="flex items-center gap-4 text-ink/70">
+        <div className="flex items-center gap-4 text-charcoal/70">
           {socials.map((social) => (
             <a
               key={social.label}
               href={social.href}
-              className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-ink/10 transition hover:border-ink/30 hover:text-ink"
+              className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-navy/10 transition hover:border-navy/30 hover:text-navy"
               aria-label={social.label}
             >
               {social.icon}

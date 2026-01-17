@@ -94,7 +94,7 @@ export function HeroCarousel() {
           />
         </motion.div>
       </AnimatePresence>
-      <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/35 to-black/60" />
+      <div className="absolute inset-0 bg-gradient-to-b from-graphite/60 via-graphite/45 to-graphite/70" />
       <div className="relative z-10 mx-auto flex w-full max-w-5xl flex-col items-start gap-6 px-6 text-white">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}

@@ -64,36 +64,40 @@ export function TopNav() {
     <>
       <header
         className={`fixed left-0 right-0 top-0 z-40 transition ${
-          isScrolled ? "bg-white/70 backdrop-blur-md shadow-[0_10px_30px_rgba(15,23,42,0.08)]" : "bg-transparent"
+          isScrolled
+            ? "bg-ivory/80 backdrop-blur-md shadow-[0_10px_30px_rgba(0,33,71,0.12)]"
+            : "bg-transparent"
         }`}
       >
         <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4">
           <button
             type="button"
             onClick={() => handleNavigate("#top")}
-            className="text-sm font-medium uppercase tracking-[0.35em] text-ink"
+            className="text-sm font-medium uppercase tracking-[0.35em] text-navy"
           >
             Nathan &amp; Co.
           </button>
           <div className="flex items-center gap-4">
-            <span className="hidden text-[0.6rem] uppercase tracking-[0.3em] text-ink/60 sm:block">
+            <span className="hidden text-[0.6rem] uppercase tracking-[0.3em] text-charcoal/60 sm:block">
               {NAV_ITEMS.find((item) => item.id === activeSection)?.label}
             </span>
-            <span className="hidden h-1 w-1 rounded-full bg-ink/60 sm:block" aria-hidden="true" />
+            <span className="hidden h-1 w-1 rounded-full bg-gold/70 sm:block" aria-hidden="true" />
             <button
               type="button"
-              className="relative inline-flex h-11 w-11 items-center justify-center rounded-full border border-ink/20 bg-white/70 text-ink transition hover:bg-white"
+              className="relative inline-flex h-11 w-11 items-center justify-center rounded-full border border-navy/20 bg-ivory/80 text-navy transition hover:bg-ivory"
               aria-label={isOpen ? "Close menu" : "Open menu"}
               onClick={() => setIsOpen((prev) => !prev)}
             >
               <span className="sr-only">{isOpen ? "Close menu" : "Open menu"}</span>
               <div className="flex flex-col gap-1.5">
                 <span
-                  className={`h-0.5 w-5 rounded bg-ink transition ${isOpen ? "translate-y-2 rotate-45" : ""}`}
+                  className={`h-0.5 w-5 rounded bg-navy transition ${isOpen ? "translate-y-2 rotate-45" : ""}`}
                 />
-                <span className={`h-0.5 w-5 rounded bg-ink transition ${isOpen ? "opacity-0" : ""}`} />
                 <span
-                  className={`h-0.5 w-5 rounded bg-ink transition ${isOpen ? "-translate-y-2 -rotate-45" : ""}`}
+                  className={`h-0.5 w-5 rounded bg-navy transition ${isOpen ? "opacity-0" : ""}`}
+                />
+                <span
+                  className={`h-0.5 w-5 rounded bg-navy transition ${isOpen ? "-translate-y-2 -rotate-45" : ""}`}
                 />
               </div>
             </button>
