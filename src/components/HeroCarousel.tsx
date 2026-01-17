@@ -61,7 +61,7 @@ export function HeroCarousel() {
   };
 
   return (
-    <section id="top" className="group relative flex min-h-screen w-full items-center">
+    <section id="top" className="group relative flex min-h-screen w-full items-center bg-base">
       <AnimatePresence mode="wait">
         <motion.div
           key={slides[index].image}
@@ -94,27 +94,39 @@ export function HeroCarousel() {
           />
         </motion.div>
       </AnimatePresence>
-      <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/35 to-black/60" />
-      <div className="relative z-10 mx-auto flex w-full max-w-5xl flex-col items-start gap-6 px-6 text-white">
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: "easeOut" }}
-          className="text-4xl font-semibold leading-tight tracking-[0.06em] sm:text-5xl lg:text-6xl"
-        >
-          {siteTitle}
-        </motion.h1>
-        <motion.p
-          key={slides[index].tagline}
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg md:text-xl"
-        >
-          {slides[index].tagline}
-        </motion.p>
+      <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-black/35 to-black/45" />
+      <div className="relative z-10 mx-auto flex w-full max-w-5xl px-6">
+        <div className="surface-glass w-full max-w-3xl rounded-[var(--radius-lg)] px-6 py-8 sm:px-10 sm:py-12">
+          <span className="badge">Chartered Accountants since 1963</span>
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            className="mt-5 text-4xl font-semibold leading-tight tracking-[0.06em] text-primary sm:text-5xl lg:text-6xl"
+          >
+            {siteTitle}
+          </motion.h1>
+          <motion.p
+            key={slides[index].tagline}
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="mt-4 max-w-2xl text-base leading-relaxed text-secondary sm:text-lg md:text-xl"
+          >
+            {slides[index].tagline}
+          </motion.p>
+          <div className="divider mt-6 w-24" aria-hidden="true" />
+          <div className="mt-6 flex flex-wrap items-center gap-4">
+            <a href="#who-we-are" className="btn btn-primary">
+              Schedule Consultation
+            </a>
+            <a href="#services" className="btn btn-secondary">
+              View Services
+            </a>
+          </div>
+        </div>
       </div>
-      <div className="absolute inset-x-0 bottom-10 z-10 flex flex-col items-center gap-6 px-6">
+      <div className="absolute inset-x-0 bottom-10 z-10 flex flex-col items-center gap-6 px-6 text-white">
         <div className="flex w-full items-center justify-between">
           <button
             type="button"

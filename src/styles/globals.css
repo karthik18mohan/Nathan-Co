@@ -1,26 +1,5 @@
+@import "./theme.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  @apply bg-cloud text-ink antialiased font-body;
-  letter-spacing: 0.01em;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-heading);
-  letter-spacing: 0.04em;
-}
-
-::selection {
-  background: rgba(15, 23, 42, 0.15);
-}

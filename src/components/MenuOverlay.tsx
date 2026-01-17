@@ -70,7 +70,7 @@ export function MenuOverlay({ open, onClose, onNavigate }: MenuOverlayProps) {
       {open ? (
         <motion.div
           ref={overlayRef}
-          className="fixed inset-0 z-50 flex items-center justify-center bg-ink/70 text-white backdrop-blur-md"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-primary/80 text-white backdrop-blur-md"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -115,7 +115,7 @@ export function MenuOverlay({ open, onClose, onNavigate }: MenuOverlayProps) {
                   type="button"
                   ref={index === 0 ? firstButtonRef : undefined}
                   onClick={() => onNavigate(item.id)}
-                  className="text-left text-white transition hover:text-white/70"
+                  className="text-left text-white transition hover:text-accent"
                 >
                   {item.label}
                 </button>
