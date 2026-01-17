@@ -9,9 +9,12 @@ export default function HomePage() {
   return (
     <>
       <TopNav />
-      <main>
+      <main className="palace-bg">
         <HeroCarousel />
-        <section id="who-we-are" className="flex min-h-screen w-full items-center py-20">
+        <section
+          id="who-we-are"
+          className="flex min-h-[90vh] w-full scroll-mt-28 items-center py-16"
+        >
           <div className="mx-auto w-full max-w-[1180px] px-6">
             <SectionReveal>
               <div className="grid gap-12 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
@@ -32,7 +35,7 @@ export default function HomePage() {
                     READ MORE
                   </a>
                 </div>
-                <div className="relative h-80 w-full overflow-hidden rounded-3xl border border-ink/10 shadow-[0_24px_60px_rgba(18,18,18,0.2)] sm:h-96">
+                <div className="relative h-80 w-full overflow-hidden rounded-3xl border border-ink/10 shadow-[0_28px_70px_rgba(18,18,18,0.22),_0_0_0_1px_rgba(255,255,255,0.45)_inset,_0_-18px_30px_rgba(255,255,255,0.28)_inset] sm:h-96">
                   <Image
                     src={whoWeAreImage}
                     alt=""
@@ -45,7 +48,10 @@ export default function HomePage() {
             </SectionReveal>
           </div>
         </section>
-        <section id="what-we-do" className="flex min-h-screen w-full items-center py-20">
+        <section
+          id="what-we-do"
+          className="flex min-h-[90vh] w-full scroll-mt-28 items-center py-16"
+        >
           <div className="mx-auto w-full max-w-[1180px] px-6">
             <SectionReveal>
               <p className="text-xs font-semibold uppercase tracking-[0.4em] text-deep-green/70">
@@ -63,7 +69,10 @@ export default function HomePage() {
             </SectionReveal>
           </div>
         </section>
-        <section id="we-serve" className="flex min-h-screen w-full items-center py-20">
+        <section
+          id="we-serve"
+          className="flex min-h-[90vh] w-full scroll-mt-28 items-center py-16"
+        >
           <div className="mx-auto w-full max-w-[1180px] px-6">
             <SectionReveal>
               <p className="text-xs font-semibold uppercase tracking-[0.4em] text-deep-green/70">
@@ -81,7 +90,10 @@ export default function HomePage() {
             </SectionReveal>
           </div>
         </section>
-        <section id="history" className="flex min-h-screen w-full items-center py-20">
+        <section
+          id="history"
+          className="flex min-h-[90vh] w-full scroll-mt-28 items-center py-16"
+        >
           <div className="mx-auto w-full max-w-[1180px] px-6">
             <SectionReveal>
               <p className="text-xs font-semibold uppercase tracking-[0.4em] text-deep-green/70">History</p>
@@ -94,7 +106,10 @@ export default function HomePage() {
             </SectionReveal>
           </div>
         </section>
-        <section id="contact" className="flex min-h-screen w-full items-center py-20">
+        <section
+          id="contact"
+          className="flex min-h-[90vh] w-full scroll-mt-28 items-center py-16"
+        >
           <div className="mx-auto w-full max-w-[1180px] px-6">
             <SectionReveal>
               <p className="text-xs font-semibold uppercase tracking-[0.4em] text-deep-green/70">

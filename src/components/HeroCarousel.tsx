@@ -39,12 +39,12 @@ export function HeroCarousel() {
             </div>
           </div>
           <div className="relative lg:col-span-6">
-            <div className="relative h-[26rem] w-full overflow-hidden rounded-[32px] border border-ink/10 bg-fog shadow-[0_30px_70px_rgba(18,18,18,0.18)] sm:h-[30rem]">
+            <div className="relative h-[26rem] w-full overflow-hidden rounded-[32px] border border-ink/10 bg-fog shadow-[0_30px_70px_rgba(18,18,18,0.18),_0_0_0_1px_rgba(255,255,255,0.5)_inset,_0_-12px_24px_rgba(255,255,255,0.25)_inset] sm:h-[30rem]">
               <Image
                 src={heroImage}
-                alt="Architectural facade in monochrome tones"
+                alt="Architectural facade in warm stone tones"
                 fill
-                className="object-cover grayscale"
+                className="object-cover"
                 priority
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
