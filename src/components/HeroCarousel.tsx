@@ -1,195 +1,61 @@
-"use client";
-
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { heroImages, heroTaglines, siteTitle } from "@/content/copy";
+import { siteTitle } from "@/content/copy";
 
-const AUTO_INTERVAL_MS = 4500;
-const DRAG_THRESHOLD = 80;
+const heroImage =
+  "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1600&q=80";
 
-const slideVariants = {
-  enter: { opacity: 0, scale: 1.05 },
-  center: { opacity: 1, scale: 1 },
-  exit: { opacity: 0, scale: 1.02 }
-};
+const grainTexture =
+  "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.35'/%3E%3C/svg%3E";
 
 export function HeroCarousel() {
-  const slides = useMemo(
-    () =>
-      heroImages.map((image, index) => ({
-        image,
-        tagline: heroTaglines[index]
-      })),
-    []
-  );
-  const [index, setIndex] = useState(0);
-  const intervalRef = useRef<number | null>(null);
-
-  const startTimer = useCallback(() => {
-    if (intervalRef.current) {
-      window.clearInterval(intervalRef.current);
-    }
-    intervalRef.current = window.setInterval(() => {
-      setIndex((prev) => (prev + 1) % slides.length);
-    }, AUTO_INTERVAL_MS);
-  }, [slides.length]);
-
-  useEffect(() => {
-    startTimer();
-    return () => {
-      if (intervalRef.current) {
-        window.clearInterval(intervalRef.current);
-      }
-    };
-  }, [startTimer]);
-
-  const goTo = useCallback(
-    (nextIndex: number) => {
-      setIndex(nextIndex);
-      startTimer();
-    },
-    [startTimer]
-  );
-
-  const handlePrev = () => {
-    goTo((index - 1 + slides.length) % slides.length);
-  };
-
-  const handleNext = () => {
-    goTo((index + 1) % slides.length);
-  };
-
   return (
-    <section id="top" className="group relative flex min-h-screen w-full items-center">
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={slides[index].image}
-          className="absolute inset-0"
-          variants={slideVariants}
-          initial="enter"
-          animate="center"
-          exit="exit"
-          transition={{ duration: 1, ease: "easeOut" }}
-          drag="x"
-          dragConstraints={{ left: 0, right: 0 }}
-          dragElastic={0.2}
-          onDragEnd={(_, info) => {
-            if (info.offset.x > DRAG_THRESHOLD) {
-              handlePrev();
-              return;
-            }
-            if (info.offset.x < -DRAG_THRESHOLD) {
-              handleNext();
-            }
-          }}
-        >
-          <Image
-            src={slides[index].image}
-            alt=""
-            fill
-            className="object-cover"
-            priority={index === 0}
-            sizes="100vw"
-          />
-        </motion.div>
-      </AnimatePresence>
-      <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/35 to-black/60" />
-      <div className="relative z-10 mx-auto flex w-full max-w-5xl flex-col items-start gap-6 px-6 text-white">
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: "easeOut" }}
-          className="text-4xl font-semibold leading-tight tracking-[0.06em] sm:text-5xl lg:text-6xl"
-        >
-          {siteTitle}
-        </motion.h1>
-        <motion.p
-          key={slides[index].tagline}
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg md:text-xl"
-        >
-          {slides[index].tagline}
-        </motion.p>
-      </div>
-      <div className="absolute inset-x-0 bottom-10 z-10 flex flex-col items-center gap-6 px-6">
-        <div className="flex w-full items-center justify-between">
-          <button
-            type="button"
-            aria-label="Previous slide"
-            onClick={handlePrev}
-            className="flex h-11 w-11 items-center justify-center rounded-full border border-white/50 bg-white/10 text-white transition hover:bg-white/20 md:opacity-0 md:group-hover:opacity-100"
-          >
-            <svg
-              aria-hidden="true"
-              viewBox="0 0 24 24"
-              className="h-5 w-5"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M15 18l-6-6 6-6" />
-            </svg>
-          </button>
-          <button
-            type="button"
-            aria-label="Next slide"
-            onClick={handleNext}
-            className="flex h-11 w-11 items-center justify-center rounded-full border border-white/50 bg-white/10 text-white transition hover:bg-white/20 md:opacity-0 md:group-hover:opacity-100"
-          >
-            <svg
-              aria-hidden="true"
-              viewBox="0 0 24 24"
-              className="h-5 w-5"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M9 6l6 6-6 6" />
-            </svg>
-          </button>
+    <section id="top" className="relative flex min-h-screen w-full items-center overflow-hidden bg-ivory">
+      <div className="mx-auto w-full max-w-[1180px] px-6 pb-16 pt-28 sm:pt-32">
+        <div className="grid gap-12 lg:grid-cols-12 lg:items-center">
+          <div className="lg:col-span-6">
+            <p className="text-xs font-semibold uppercase tracking-[0.42em] text-deep-green/80">
+              Chartered Accountants
+            </p>
+            <h1 className="mt-4 text-4xl font-semibold leading-tight text-ink sm:text-5xl lg:text-6xl">
+              {siteTitle}
+            </h1>
+            <p className="mt-6 max-w-xl text-base leading-relaxed text-ink/70 sm:text-lg">
+              Purpose-built financial stewardship with an understated heritage—trusted by
+              multi-generational enterprises and emerging leaders alike.
+            </p>
+            <div className="mt-10 flex flex-wrap gap-4">
+              <a
+                href="#contact"
+                className="inline-flex items-center justify-center rounded-full bg-ink px-7 py-3 text-xs font-semibold uppercase tracking-[0.32em] text-ivory shadow-[0_18px_40px_rgba(18,18,18,0.25)] transition hover:-translate-y-0.5 hover:bg-ink/90"
+              >
+                Schedule a Consultation
+              </a>
+              <a
+                href="#what-we-do"
+                className="inline-flex items-center justify-center rounded-full border border-ink px-7 py-3 text-xs font-semibold uppercase tracking-[0.32em] text-ink transition hover:-translate-y-0.5 hover:bg-ink/5"
+              >
+                Explore Services
+              </a>
+            </div>
+          </div>
+          <div className="relative lg:col-span-6">
+            <div className="relative h-[26rem] w-full overflow-hidden rounded-[32px] border border-ink/10 bg-fog shadow-[0_30px_70px_rgba(18,18,18,0.18)] sm:h-[30rem]">
+              <Image
+                src={heroImage}
+                alt="Architectural facade in monochrome tones"
+                fill
+                className="object-cover grayscale"
+                priority
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-br from-ivory/20 via-transparent to-deep-green/10" />
+              <div
+                className="pointer-events-none absolute inset-0 opacity-[0.06] mix-blend-multiply"
+                style={{ backgroundImage: `url("${grainTexture}")` }}
+              />
+            </div>
+          </div>
         </div>
-        <div className="flex items-center gap-2">
-          {slides.map((_, slideIndex) => (
-            <button
-              key={slideIndex}
-              type="button"
-              aria-label={`Slide ${slideIndex + 1}`}
-              onClick={() => goTo(slideIndex)}
-              className={`h-2 w-2 rounded-full border border-white/70 transition ${
-                slideIndex === index ? "bg-white" : "bg-transparent"
-              }`}
-            />
-          ))}
-        </div>
-      </div>
-      <div className="absolute bottom-6 left-1/2 z-10 -translate-x-1/2">
-        <motion.a
-          href="#who-we-are"
-          aria-label="Scroll to Who We Are"
-          className="flex h-10 w-10 items-center justify-center text-white"
-          animate={{ y: [0, 6, 0] }}
-          transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
-        >
-          <svg
-            aria-hidden="true"
-            viewBox="0 0 24 24"
-            className="h-5 w-5"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="M6 9l6 6 6-6" />
-          </svg>
-        </motion.a>
       </div>
     </section>
   );
