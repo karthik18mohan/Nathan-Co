@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  @apply bg-cloud text-ink antialiased font-body;
+  @apply bg-ivory text-charcoal antialiased font-body;
   letter-spacing: 0.01em;
 }
 
@@ -22,5 +22,5 @@ h6 {
 }
 
 ::selection {
-  background: rgba(15, 23, 42, 0.15);
+  background: rgba(0, 33, 71, 0.15);
 }

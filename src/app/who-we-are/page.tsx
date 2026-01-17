@@ -16,7 +16,7 @@ export default function WhoWeArePage() {
           className="object-cover"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/70" />
+        <div className="absolute inset-0 bg-gradient-to-b from-graphite/80 via-graphite/50 to-graphite/80" />
 
         <motion.div
           initial={{ opacity: 0, y: 14 }}
@@ -31,10 +31,10 @@ export default function WhoWeArePage() {
       </section>
 
       <section className="mx-auto max-w-5xl px-6 py-16">
-        <h2 className="text-xl font-semibold tracking-tight sm:text-2xl">
+        <h2 className="text-xl font-semibold tracking-tight text-navy sm:text-2xl">
           {whoWeAreHeading}
         </h2>
-        <p className="mt-6 text-base leading-relaxed text-neutral-700">
+        <p className="mt-6 text-base leading-relaxed text-charcoal/80">
           {whoWeAreBody}
         </p>
       </section>

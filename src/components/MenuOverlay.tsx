@@ -70,7 +70,7 @@ export function MenuOverlay({ open, onClose, onNavigate }: MenuOverlayProps) {
       {open ? (
         <motion.div
           ref={overlayRef}
-          className="fixed inset-0 z-50 flex items-center justify-center bg-ink/70 text-white backdrop-blur-md"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-graphite/80 text-mist backdrop-blur-md"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -87,7 +87,7 @@ export function MenuOverlay({ open, onClose, onNavigate }: MenuOverlayProps) {
             <button
               type="button"
               aria-label="Close menu"
-              className="absolute right-6 top-6 inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/30 text-white transition hover:bg-white/10"
+              className="absolute right-6 top-6 inline-flex h-10 w-10 items-center justify-center rounded-full border border-mist/40 text-mist transition hover:bg-mist/10"
               onClick={onClose}
             >
               <svg
@@ -104,9 +104,9 @@ export function MenuOverlay({ open, onClose, onNavigate }: MenuOverlayProps) {
                 <path d="M6 6l12 12" />
               </svg>
             </button>
-            <div className="space-y-2 text-sm uppercase tracking-[0.4em] text-white/70">
-              <p className="text-white">Nathan &amp; Co.</p>
-              <p className="text-xs text-white/60">Excellence through integrity.</p>
+            <div className="space-y-2 text-sm uppercase tracking-[0.4em] text-mist/70">
+              <p className="text-mist">Nathan &amp; Co.</p>
+              <p className="text-xs text-mist/60">Excellence through integrity.</p>
             </div>
             <nav className="flex flex-col gap-6 text-3xl font-medium tracking-[0.12em]">
               {MENU_ITEMS.map((item, index) => (
@@ -115,7 +115,7 @@ export function MenuOverlay({ open, onClose, onNavigate }: MenuOverlayProps) {
                   type="button"
                   ref={index === 0 ? firstButtonRef : undefined}
                   onClick={() => onNavigate(item.id)}
-                  className="text-left text-white transition hover:text-white/70"
+                  className="text-left text-mist transition hover:text-gold"
                 >
                   {item.label}
                 </button>
