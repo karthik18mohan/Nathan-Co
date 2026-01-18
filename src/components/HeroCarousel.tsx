@@ -19,13 +19,13 @@ export function HeroCarousel() {
         <div className="mt-10 flex flex-wrap justify-center gap-4">
           <a
             href="#contact"
-            className="inline-flex items-center justify-center rounded-full bg-ink px-7 py-3 text-xs font-semibold uppercase tracking-[0.32em] text-ivory shadow-[0_18px_40px_rgba(18,18,18,0.25)] transition hover:-translate-y-0.5 hover:bg-ink/90"
+            className="inline-flex items-center justify-center rounded-full bg-ink px-[27px] py-[11px] text-xs font-semibold uppercase tracking-[0.32em] text-ivory shadow-[0_18px_40px_rgba(18,18,18,0.25)] transition hover:-translate-y-0.5 hover:bg-ink/90"
           >
             Schedule a Consultation
           </a>
           <a
             href="#what-we-do"
-            className="inline-flex items-center justify-center rounded-full border border-ink px-7 py-3 text-xs font-semibold uppercase tracking-[0.32em] text-ink transition hover:-translate-y-0.5 hover:bg-ink/5"
+            className="inline-flex items-center justify-center rounded-full border border-ink px-[27px] py-[11px] text-xs font-semibold uppercase tracking-[0.32em] text-ink transition hover:-translate-y-0.5 hover:bg-ink/5"
           >
             Explore Services
           </a>
