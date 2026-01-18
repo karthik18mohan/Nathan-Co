@@ -16,7 +16,7 @@ export function TopNav() {
           >
             Nathan &amp; Co.
           </a>
-          <span className="inline-flex items-center rounded-full border border-brass/70 px-3 py-1 text-[0.55rem] uppercase tracking-[0.32em] text-deep-green">
+          <span className="inline-flex items-center rounded-md border border-brass/70 px-3 py-1 text-[0.55rem] uppercase tracking-[0.32em] text-deep-green">
             Since • Over six decades
           </span>
         </div>
@@ -35,7 +35,7 @@ export function TopNav() {
           <summary className="cursor-pointer list-none text-xs uppercase tracking-[0.3em] text-ink">
             Menu
           </summary>
-          <div className="absolute right-0 mt-3 w-52 rounded-2xl border border-ink/10 bg-ivory p-4 shadow-[0_18px_40px_rgba(18,18,18,0.12)]">
+          <div className="absolute right-0 mt-3 w-52 rounded-xl border border-ink/15 bg-ivory p-4 shadow-[0_18px_40px_rgba(44,42,38,0.12)]">
             <nav className="flex flex-col gap-3 text-xs uppercase tracking-[0.3em] text-ink">
               {NAV_ITEMS.map((item) => (
                 <a key={item.href} href={item.href} className="hover:text-deep-green">

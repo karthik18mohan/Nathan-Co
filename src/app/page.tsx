@@ -27,12 +27,12 @@ export default function HomePage() {
                   </p>
                   <a
                     href="#history"
-                    className="mt-8 inline-flex rounded-full border border-ink/15 bg-ink px-7 py-3 text-xs font-semibold uppercase tracking-[0.32em] text-ivory shadow-[0_18px_40px_rgba(18,18,18,0.25)] transition hover:-translate-y-0.5 hover:bg-ink/90"
+                    className="mt-8 inline-flex rounded-md border border-ink/20 bg-ink px-7 py-3 text-xs font-semibold uppercase tracking-[0.32em] text-ivory shadow-[0_18px_40px_rgba(44,42,38,0.25)] transition hover:-translate-y-0.5 hover:bg-ink/90"
                   >
                     READ MORE
                   </a>
                 </div>
-                <div className="relative h-80 w-full overflow-hidden rounded-3xl border border-ink/10 shadow-[0_24px_60px_rgba(18,18,18,0.2)] sm:h-96">
+                <div className="relative h-80 w-full overflow-hidden rounded-2xl border border-ink/15 shadow-[0_24px_60px_rgba(44,42,38,0.2)] sm:h-96">
                   <Image
                     src={whoWeAreImage}
                     alt=""

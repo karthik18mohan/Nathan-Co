@@ -5,11 +5,11 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: "#121212",
-        ivory: "#F7F2E8",
-        brass: "#B08D57",
-        "deep-green": "#143A2C",
-        fog: "#E7E0D6"
+        ink: "#2C2A26",
+        ivory: "#F5EBDD",
+        brass: "#7B2D2D",
+        "deep-green": "#2F4B3A",
+        fog: "#E6D9C8"
       },
       fontFamily: {
         sans: ["var(--font-body)", "ui-sans-serif", "system-ui"],

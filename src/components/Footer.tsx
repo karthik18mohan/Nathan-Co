@@ -36,7 +36,7 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-ink/10 bg-white/80 py-12">
+    <footer className="border-t border-ink/15 bg-ivory/80 py-12">
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-10 px-6 lg:flex-row lg:items-start lg:justify-between">
         <div className="space-y-3">
           <p className="text-sm font-medium uppercase tracking-[0.35em] text-ink">Nathan &amp; Co.</p>
@@ -52,7 +52,7 @@ export function Footer() {
             <a
               key={social.label}
               href={social.href}
-              className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-ink/10 transition hover:border-ink/30 hover:text-ink"
+              className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-ink/15 transition hover:border-ink/30 hover:text-ink"
               aria-label={social.label}
             >
               {social.icon}

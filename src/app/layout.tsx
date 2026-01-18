@@ -1,16 +1,18 @@
 import type { Metadata } from "next";
 import "@/styles/globals.css";
 import { siteTitle } from "@/content/copy";
-import { Fraunces, Inter } from "next/font/google";
+import { Old_Standard_TT } from "next/font/google";
 
-const bodyFont = Inter({
+const bodyFont = Old_Standard_TT({
   subsets: ["latin"],
+  weight: ["400", "700"],
   variable: "--font-body",
   display: "swap"
 });
 
-const headingFont = Fraunces({
+const headingFont = Old_Standard_TT({
   subsets: ["latin"],
+  weight: ["700"],
   variable: "--font-heading",
   display: "swap"
 });

@@ -87,7 +87,7 @@ export function MenuOverlay({ open, onClose, onNavigate }: MenuOverlayProps) {
             <button
               type="button"
               aria-label="Close menu"
-              className="absolute right-6 top-6 inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/30 text-white transition hover:bg-white/10"
+              className="absolute right-6 top-6 inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/30 text-white transition hover:bg-white/10"
               onClick={onClose}
             >
               <svg
