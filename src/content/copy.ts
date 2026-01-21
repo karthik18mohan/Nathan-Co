@@ -23,6 +23,13 @@ export const aboutPanelBullets = ["Quality", "Integrity", "Professionalism"] as 
 
 export const servicesLabel = "WHAT WE DO";
 
+export const whoWeAreHeading = "Stewards of enduring financial partnerships.";
+export const whoWeAreBody =
+  "Nathan & Co. brings decades of chartered accountancy expertise to clients who value discretion, rigor, and foresight. Our teams blend technical precision with attentive relationship management, ensuring every engagement is grounded in integrity, transparency, and long-term value creation.";
+export const whoWeAreHeroImage = "/2.jpg";
+export const historyBody =
+  "From our earliest days, Nathan & Co. has been shaped by a commitment to principled counsel, meticulous audit practice, and thoughtful advisory. Each era of growth has reinforced our dedication to client stewardship, professional ethics, and the careful management of financial legacies.";
+
 export const services = [
   {
     title: "Audit & Assurance",
