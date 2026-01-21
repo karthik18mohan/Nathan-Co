@@ -225,7 +225,7 @@ export function HeritageLanding() {
       <section id="home" data-section className="relative flex min-h-screen w-full items-center">
         <div
           data-bg
-          className="absolute inset-0 bg-[url('/images/1.jpg')] bg-cover bg-center"
+          className="absolute inset-0 bg-[url('/1.jpg')] bg-cover bg-center"
           aria-hidden="true"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-ink/70 via-ink/60 to-ink/80" aria-hidden="true" />
@@ -267,7 +267,7 @@ export function HeritageLanding() {
       <section id="about" data-section className="relative flex min-h-screen w-full items-center">
         <div
           data-bg
-          className="absolute inset-0 bg-[url('/images/2.jpg')] bg-cover bg-center"
+          className="absolute inset-0 bg-[url('/2.jpg')] bg-cover bg-center"
           aria-hidden="true"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-paper/80 via-paper/70 to-paper/90" aria-hidden="true" />
@@ -306,7 +306,7 @@ export function HeritageLanding() {
       <section id="services" data-section className="relative flex min-h-screen w-full items-center">
         <div
           data-bg
-          className="absolute inset-0 bg-[url('/images/3.jpg')] bg-cover bg-center"
+          className="absolute inset-0 bg-[url('/3.jpg')] bg-cover bg-center"
           aria-hidden="true"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-paper/90 via-paper/85 to-paper/95" aria-hidden="true" />
