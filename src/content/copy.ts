@@ -1,39 +1,128 @@
 export const siteTitle = "Nathan & Co. Chartered Accountants";
 
-export const whoWeAreHeading = "WHO WE ARE";
-
-export const whoWeAreBody =
-  "Founded on a vision to uphold the highest ideals of quality and integrity, Nathan & Co. has embraced excellence as a way of life for over six decades. Rooted in the firm's enduring values of ethics, transparency, and professionalism, every engagement reflects our unwavering commitment to these principles that define our legacy and purpose.  Since its inception, Nathan & Co. has evolved alongside the Indian economy- from the license era to liberalization, and onwards into today’s dynamic digital age. Every generation of our firm has contributed to broadening our horizons, extending our expertise from traditional audit and taxation to modern domains such as risk advisory, virtual CFO services, and business consulting.  Through every chapter of growth, we have remained unwavering in our commitment to the core values of the Chartered Accountancy profession as enshrined in the Chartered Accountants Act, 1949 and the Code of Ethics prescribed by the Institute of Chartered Accountants of India (ICAI).  We combine deep technical expertise with a client-centric approach to assist businesses in confidently navigating their financial journeys from incorporation of start up to ultimate listed corporations";
-
-export const historyBody =
-  "Since its inception, Nathan & Co. has evolved alongside the Indian economy- from the license era to liberalization, and onwards into today’s dynamic digital age. Every generation of our firm has contributed to broadening our horizons, extending our expertise from traditional audit and taxation to modern domains such as risk advisory, virtual CFO services, and business consulting.";
-
-export const heroTaglines = [
-  "Founded on a vision to uphold the highest ideals of quality and integrity, Nathan & Co. has embraced excellence as a way of life for over six decades.",
-  "Rooted in the firm's enduring values of ethics, transparency, and professionalism, every engagement reflects our unwavering commitment to these principles that define our legacy and purpose.",
-  "Since its inception, Nathan & Co. has evolved alongside the Indian economy- from the license era to liberalization, and onwards into today’s dynamic digital age.",
-  "Every generation of our firm has contributed to broadening our horizons, extending our expertise from traditional audit and taxation to modern domains such as risk advisory, virtual CFO services, and business consulting.",
-  "We combine deep technical expertise with a client-centric approach to assist businesses in confidently navigating their financial journeys from incorporation of start up to ultimate listed corporations",
-] as const;
-
 export const navItems = [
-  { label: "WHO WE ARE", href: "/#who-we-are" },
-  { label: "History", href: "/#history" },
+  { label: "Home", href: "/#home" },
+  { label: "WHO WE ARE", href: "/#about" },
+  { label: "WHAT WE DO", href: "/#services" }
 ] as const;
 
-export const heroImages = [
-  "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=2400&q=80",
-  "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=2400&q=80",
-  "https://images.unsplash.com/photo-1454165205744-3b78555e5572?auto=format&fit=crop&w=2400&q=80",
-  "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=2400&q=80",
-  "https://images.unsplash.com/photo-1444653614773-995cb1ef9efa?auto=format&fit=crop&w=2400&q=80",
+export const heroHeading = "Nathan & Co.";
+export const heroSubheading = "Chartered Accountants";
+export const heroTagline = "Upholding the highest ideals of quality, integrity, and trust.";
+
+export const aboutLabel = "WHO WE ARE";
+export const aboutBody = `Founded on a vision to uphold the highest ideals of quality and ...mitment to these principles that define our legacy and purpose.
+
+Since its inception, Nathan & Co. has evolved alongside the Indi...s risk advisory, virtual CFO services, and business consulting.
+
+Through every chapter of growth, we have remained unwavering in ...ibed by the Institute of Chartered Accountants of India (ICAI).
+
+We combine deep technical expertise with a client-centric approa...s from incorporation of start up to ultimate listed corporations`;
+
+export const aboutPanelBullets = ["Quality", "Integrity", "Professionalism"] as const;
+
+export const servicesLabel = "WHAT WE DO";
+
+export const services = [
+  {
+    title: "Audit & Assurance",
+    body:
+      "Every engagement at Nathan & Co. is thoughtfully customized to m...y stage, ensuring impactful, timely, and value-driven outcomes.\n\nOur Audit and Assurance services cover a wide range of specializ...ordance with the applicable standards and regulations, includes:",
+    bullets: [
+      "Statutory Audit",
+      "Internal Audit",
+      "Process Audit",
+      "Concurrent Audit",
+      "Revenue Audit",
+      "Forensic Audit",
+      "Stock Audit",
+      "Asset Audit",
+      "Management Audit",
+      "Information System Audit"
+    ]
+  },
+  {
+    title: "Taxation & Compliance",
+    body:
+      "Our Regulatory and Compliance services are crafted to assist bus...reporting obligations with accuracy, timeliness, and integrity.\n\nEvery engagement is executed in complete alignment with applicab...ng complete compliance with ethical and statutory requirements.\n\nThrough a robust compliance-driven approach, we support organiza...tigating risks and maintaining the highest levels of governance.",
+    groups: [
+      {
+        subheading: "Income tax and international taxation",
+        bullets: [
+          "Tax Planning and Advisory",
+          "Compliance Review",
+          "Assistance in filing Forms and Returns",
+          "Representations before relevant Authority"
+        ]
+      },
+      {
+        subheading: "GST and Other Indirect Taxation",
+        bullets: [
+          "Tax Registration",
+          "Tax Planning and Advisory",
+          "Assistance in Filing Forms and Returns",
+          "Compliance Review",
+          "Representations before relevant Authority"
+        ]
+      }
+    ]
+  },
+  {
+    title: "Corporate & Allied Laws",
+    body:
+      "At our Corporate & Allied Laws desk, we deliver comprehensive en... final exit—across companies, LLPs, trusts, and joint ventures.\nOur practice encompasses a wide spectrum of corporate governance... integrity, independence, and adherence to statutory standards.\nWe work as your strategic partner to simplify regulatory complex...igate compliance risks, and enable sustainable, long-term growth"
+  },
+  {
+    title: "Accounting & Bookkeeping Outsourcing",
+    body:
+      "Empowering businesses with cloud-based accounting, structured re... strict adherence to professional standards and applicable Laws.",
+    bullets: [
+      "IFRS/USGAAP/IND-AS compliant bookkeeping.",
+      "Internal Financial control to suit business practices.",
+      "Liaison with Customer, Vendor, Banker & other Stakeholders.",
+      "Compliance of Various Statutes (PF/ESI/Gratuity/GST/TDS/Corporate Governance/FLA)"
+    ]
+  },
+  {
+    title: "Financial Planning & Analysis (FP&A)",
+    body:
+      "Structured Financial Planning and Performance Analysis enhanced ...ns, calculated risk management, and sustainable business growth.",
+    bullets: [
+      "Budgets & Forecasts.",
+      "Financial Analysis & Reporting.",
+      "Performance Monitoring including suitable enhancement.",
+      "Strategic Planning Support.",
+      "Decision Support & Data Visualization."
+    ]
+  },
+  {
+    title: "Virtual CFO Services",
+    body:
+      "Providing Strategic Financial Management through effective plann...ring sustainable financial discipline and long-term development.",
+    bullets: [
+      "Cash Flow Analysis & Planning.",
+      "Working Capital Management.",
+      "Developing Financial Strategy.",
+      "Monitoring Financial health & Corporate goals/KPIs.",
+      "Capital Structuring/Restructuring.",
+      "Risk Management & Advisory",
+      "Financial Reporting & Compliance"
+    ]
+  },
+  {
+    title: "Other Services",
+    body:
+      "Integrated financial, corporate, and strategic advisory — delive...bling businesses to grow, transform, and create sustained value.",
+    bullets: [
+      "End-to-end support for Startup & MSME",
+      "Forensic audit & Investigation",
+      "Valuation & Due Diligence review",
+      "Corporate Finance & Fundraising Avenues",
+      "Financial Reconstruction,revival &rehabilitation.",
+      "Acquisition,Amalgamations & Mergers.",
+      "Collaborations/Joint Ventures",
+      "ERP Implementations",
+      "IND AS implementations"
+    ]
+  }
 ] as const;
-
-export const whoWeAreImage =
-  "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=2000&q=80";
-
-export const whoWeAreHeroImage =
-  "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=2000&q=80";
-
-export const historyImage =
-  "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=2000&q=80";

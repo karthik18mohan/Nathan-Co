@@ -3,11 +3,19 @@
 @tailwind utilities;
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
+}
+
+:root {
+  --paper: #fbf8f2;
+  --ink: #0b1b3b;
+  --muted: #3a4a6a;
+  --rule: rgba(11, 27, 59, 0.18);
+  --gold: #b08d57;
 }
 
 body {
-  @apply bg-cloud text-ink antialiased font-body;
+  @apply bg-paper text-ink antialiased font-body;
   letter-spacing: 0.01em;
 }
 

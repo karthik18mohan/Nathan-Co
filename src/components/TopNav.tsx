@@ -4,21 +4,20 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { MenuOverlay } from "@/components/MenuOverlay";
 
 const NAV_ITEMS = [
-  { label: "Home", id: "#top" },
-  { label: "WHO WE ARE", id: "#who-we-are" },
-  { label: "History", id: "#history" }
+  { label: "Home", id: "#home" },
+  { label: "WHO WE ARE", id: "#about" },
+  { label: "WHAT WE DO", id: "#services" }
 ];
 
 export function TopNav() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [activeSection, setActiveSection] = useState("#top");
+  const [activeSection, setActiveSection] = useState("#home");
   const observerRef = useRef<IntersectionObserver | null>(null);
 
   const handleNavigate = useCallback((id: string) => {
-    const target = document.querySelector(id);
-    if (target) {
-      target.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (typeof window !== "undefined") {
+      window.dispatchEvent(new CustomEvent("heritage:navigate", { detail: { id } }));
     }
     setIsOpen(false);
   }, []);
@@ -63,14 +62,14 @@ export function TopNav() {
   return (
     <>
       <header
-        className={`fixed left-0 right-0 top-0 z-40 transition ${
-          isScrolled ? "bg-white/70 backdrop-blur-md shadow-[0_10px_30px_rgba(15,23,42,0.08)]" : "bg-transparent"
+        className={`fixed left-0 right-0 top-0 z-40 border-b transition ${
+          isScrolled ? "border-rule bg-paper/95 backdrop-blur-md" : "border-transparent bg-paper/70"
         }`}
       >
         <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4">
           <button
             type="button"
-            onClick={() => handleNavigate("#top")}
+            onClick={() => handleNavigate("#home")}
             className="text-sm font-medium uppercase tracking-[0.35em] text-ink"
           >
             Nathan &amp; Co.
@@ -79,10 +78,10 @@ export function TopNav() {
             <span className="hidden text-[0.6rem] uppercase tracking-[0.3em] text-ink/60 sm:block">
               {NAV_ITEMS.find((item) => item.id === activeSection)?.label}
             </span>
-            <span className="hidden h-1 w-1 rounded-full bg-ink/60 sm:block" aria-hidden="true" />
+            <span className="hidden h-px w-6 bg-rule sm:block" aria-hidden="true" />
             <button
               type="button"
-              className="relative inline-flex h-11 w-11 items-center justify-center rounded-full border border-ink/20 bg-white/70 text-ink transition hover:bg-white"
+              className="relative inline-flex h-11 w-11 items-center justify-center rounded-md border border-rule bg-paper/90 text-ink transition hover:bg-paper"
               aria-label={isOpen ? "Close menu" : "Open menu"}
               onClick={() => setIsOpen((prev) => !prev)}
             >

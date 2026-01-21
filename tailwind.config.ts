@@ -5,9 +5,11 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: "#0f172a",
-        cloud: "#f8fafc",
-        stone: "#e2e8f0"
+        ink: "var(--ink)",
+        paper: "var(--paper)",
+        muted: "var(--muted)",
+        rule: "var(--rule)",
+        gold: "var(--gold)"
       },
       fontFamily: {
         sans: ["var(--font-body)", "ui-sans-serif", "system-ui"],
@@ -15,7 +17,7 @@ const config: Config = {
         heading: ["var(--font-heading)", "ui-serif", "Georgia"]
       },
       boxShadow: {
-        glow: "0 20px 60px rgba(15, 23, 42, 0.15)"
+        glow: "0 20px 60px rgba(11, 27, 59, 0.15)"
       }
     }
   },
